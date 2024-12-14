@@ -17,7 +17,7 @@ const StarshipList = () => {
     <>
       <h1>Starship List</h1>
       {starships.map(ship =>  // vv must grab full id not just first number  vv
-        <Link to={`/starships/${ship.url[32]}`} key={ship._id}>
+        <Link to={`/starships/${ship.url.substring(32)}`} key={ship._id}>
           {ship.model}
         </Link>
       )}
